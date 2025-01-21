@@ -14,9 +14,6 @@ public class CustomHeaderHandlerInterceptor implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 
-		String value = "${api.key}";
-		System.out.println(value);
-
 		if (request.getHeader("FIB-X-AUTH") == null || !request.getHeader("FIB-X-AUTH").equals("f9Uie8nNf112hx8s")) {
 
 			response.getWriter().write("You are not authorized to access this endpoint!");
