@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "8d80ba13-5059-489d-bf72-c155cc452cb0",
+		"name": "cash-desk-module-balance",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18853292"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/v1/cashier/1/cash-balance",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "FIB-X-AUTH",
+						"value": "f9Uie8nNf112hx8s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cashier/1/cash-balance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cashier",
+						"1",
+						"cash-balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/cashier/1/cash-balance/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "FIB-X-AUTH",
+						"value": "f9Uie8nNf112hx8s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cashier/1/cash-balance/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cashier",
+						"1",
+						"cash-balance",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/cashier/1/cash-balance/movements/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "FIB-X-AUTH",
+						"value": "f9Uie8nNf112hx8s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cashier/1/cash-balance/movements/1?dateFrom=2025/01/18&dateTo=2025/01/29",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cashier",
+						"1",
+						"cash-balance",
+						"movements",
+						"1"
+					],
+					"query": [
+						{
+							"key": "dateFrom",
+							"value": "2025/01/18"
+						},
+						{
+							"key": "dateTo",
+							"value": "2025/01/29"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/cashier/1/cash-balance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "FIB-X-AUTH",
+						"value": "f9Uie8nNf112hx8s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"balanceId\":\"1\",\r\n    \"cashierId\":\"1\",\r\n    \"cashierName\":\"Nikolay\",\r\n    \"currency\":\"BGN\",\r\n    \"balanceAmount\":\"1000\",\r\n    \"denominations\":{\"50\":\"10\",\"10\":\"50\"}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cashier/1/cash-balance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cashier",
+						"1",
+						"cash-balance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

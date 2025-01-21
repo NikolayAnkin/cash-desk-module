@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "0b33b0d0-fa5c-4410-9d44-5bec263ca075",
+		"name": "cash-desk-module-balance operation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18853292"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/v1/cashier/1/cash-balance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "FIB-X-AUTH",
+						"value": "f9Uie8nNf112hx8s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactionType\":\"DEPOSIT\",\r\n    \"transactionAmount\":\"600\",\r\n    \"transactionCurrency\":\"BGN\",\r\n    \"transactionDenominations\":{\"50\":\"10\",\"10\":\"10\"}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cashier/1/cash-balance/1/cash-operation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cashier",
+						"1",
+						"cash-balance",
+						"1",
+						"cash-operation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
